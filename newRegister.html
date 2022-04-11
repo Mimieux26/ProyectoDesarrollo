@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styleIndex.css">
+   
+    <title>Document</title>
+</head>
+<body  class="main-bg">
+    <div class="container">
+    <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Registro</div>
+                    <div class="card-body">
+                        <form class="form-horizontal" method="post" action="#">
+                            <div class="form-group">
+                                <label for="TipIden" class="cols-sm-2 control-label">Tipo de identificaci&oacute;n</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <select class="form-control" name="TipIden" id="TipIden">
+                                            <option value="0">Seleccione</option>
+                                            <option value="1">Nacional</option>
+                                            <option value="2">Extranjero</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Cedula" class="cols-sm-2 control-label">N&uacute;mero de identificaci&oacute;n</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="Cedula" id="Cedula" placeholder="Ingrese su n&uacute;mero de identificaci&oacute;n"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" hidden id="divRol">
+                                <label for="IDRol" class="cols-sm-2 control-label" >Tipo de rol</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <select class="form-control" name="IDRol" id="IDRol" >
+                                            <option value="0">Seleccione</option>
+                                            <option value="1">Usuario regular</option>
+                                            <option value="2">Usuario administrador</option>
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Nombre" class="cols-sm-2 control-label">Nombre</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Ingrese su nombre"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="PriApel" class="cols-sm-2 control-label">Primer apellido</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="PriApel" id="PriApel" placeholder="Ingrese su primer apellido"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="SegApel" class="cols-sm-2 control-label">Segundo apellido</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="SegApel" id="SegApel" placeholder="Ingrese su segundo apellido"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Telefono" class="cols-sm-2 control-label">Tel&eacute;fono</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="Telefono" id="Telefono" placeholder="Ingrese su télefono"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Email" class="cols-sm-2 control-label">Email</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input type="email" class="form-control" name="Email" id="Email" placeholder="Ingrese su email"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contrasena" class="cols-sm-2 control-label">Contrase&ntilde;a<a href=""></a></label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ConCont" class="cols-sm-2 control-label">Confirmar contrase&ntilde;a</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input type="password" class="form-control" name="ConCont" id="ConCont" placeholder="Vuelva a ingresar su contraseña"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <button type="button" class="btn btn-primary btn-lg btn-block login-button" id="btnRegistrar">Registrar</button>
+                            </div>
+                            <div class="login-register">
+                                <a href="index.html">Login</a>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
