@@ -6,127 +6,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styleIndex.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="newRegisterjs.js"></script>
+    <style>
+        .red-alert{
+            border-color: red;
+        }
+        .green-alert{
+            border-color:chartreuse;
+            
+        }
+        .mensaje {
+            top:2px;
+            position:absolute;
+            margin-left:500px;
+            margin-top: -30px;
+            padding:10px;
+            border-radius:5px;
+            -moz-border-radius:5px;
+            -webkit-border-radius:5px;
+            min-height:30px;
+            background-color:#ccc;
+            z-index: 5;
+        }
+     
+        .arrowLeft::after {
+            position:absolute;
+            left:-20px;
+            top:15px;
+            content:"\00a0";
+            display:block;
+            width:0px;
+            height:0px;
+            border-width:10px 20px 10px 10px;
+            border-style:solid;
+            border-color:transparent #ccc transparent transparent;
+        }
+
+        .formReg span {display:none}
+        .formReg p {position:relative;}
+
+    </style>
    
     <title>Document</title>
 </head>
-<body  class="main-bg">
-    <div class="container">
-    <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Registro</div>
-                    <div class="card-body">
-                        <form class="form-horizontal" method="post" action="#">
-                            <div class="form-group">
-                                <label for="TipIden" class="cols-sm-2 control-label">Tipo de identificaci&oacute;n</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <select class="form-control" name="TipIden" id="TipIden">
-                                            <option value="0">Seleccione</option>
-                                            <option value="1">Nacional</option>
-                                            <option value="2">Extranjero</option>
-                                          </select>
+<body>
+        <div class="container">
+        <form action="" id="formRegister" class="formReg">
+            <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Registro</div>
+                            <div class="card-body">
+                                <form class="form-horizontal" method="post" action="#">
+                                    <div class="form-group">
+                                        <label for="TipIden" class="cols-sm-2 control-label">Tipo de identificaci&oacute;n</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <select class="form-control" name="TipIden" id="TipIden">
+                                                    <option value="0">Seleccione</option>
+                                                    <option value="1">Nacional</option>
+                                                    <option value="2">Extranjero</option>
+                                                </select>
+                                                <span class="mensaje arrowLeft" id="span-tip">Seleccione un tipo de identificaci&oacute;n</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Cedula" class="cols-sm-2 control-label">N&uacute;mero de identificaci&oacute;n</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="Cedula" id="Cedula" placeholder="Ingrese su n&uacute;mero de identificaci&oacute;n"/>
+                                    <div class="form-group">
+                                        <label for="Cedula" class="cols-sm-2 control-label">N&uacute;mero de identificaci&oacute;n</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="Cedula" id="Cedula" placeholder="Ingrese su n&uacute;mero de identificaci&oacute;n"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group" hidden id="divRol">
-                                <label for="IDRol" class="cols-sm-2 control-label" >Tipo de rol</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <select class="form-control" name="IDRol" id="IDRol" >
-                                            <option value="0">Seleccione</option>
-                                            <option value="1">Usuario regular</option>
-                                            <option value="2">Usuario administrador</option>
-                                          </select>
+                                    <div class="form-group" hidden id="divRol">
+                                        <label for="IDRol" class="cols-sm-2 control-label" >Tipo de rol</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <select class="form-control" name="IDRol" id="IDRol" >
+                                                    <option value="0">Seleccione</option>
+                                                    <option value="1">Usuario regular</option>
+                                                    <option value="2">Usuario administrador</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Nombre" class="cols-sm-2 control-label">Nombre</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Ingrese su nombre"/>
+                                    <div class="form-group">
+                                        <label for="Nombre" class="cols-sm-2 control-label">Nombre</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Ingrese su nombre"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="PriApel" class="cols-sm-2 control-label">Primer apellido</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="PriApel" id="PriApel" placeholder="Ingrese su primer apellido"/>
+                                    <div class="form-group">
+                                        <label for="PriApel" class="cols-sm-2 control-label">Primer apellido</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="PriApel" id="PriApel" placeholder="Ingrese su primer apellido"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="SegApel" class="cols-sm-2 control-label">Segundo apellido</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="SegApel" id="SegApel" placeholder="Ingrese su segundo apellido"/>
+                                    <div class="form-group">
+                                        <label for="SegApel" class="cols-sm-2 control-label">Segundo apellido</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="SegApel" id="SegApel" placeholder="Ingrese su segundo apellido"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Telefono" class="cols-sm-2 control-label">Tel&eacute;fono</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="Telefono" id="Telefono" placeholder="Ingrese su télefono"/>
+                                    <div class="form-group">
+                                        <label for="Telefono" class="cols-sm-2 control-label">Tel&eacute;fono</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="Telefono" id="Telefono" placeholder="Ingrese su télefono"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Email" class="cols-sm-2 control-label">Email</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                        <input type="email" class="form-control" name="Email" id="Email" placeholder="Ingrese su email"/>
+                                    <div class="form-group">
+                                        <label for="Email" class="cols-sm-2 control-label">Email</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="email" class="form-control" name="Email" id="Email" placeholder="Ingrese su email"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="contrasena" class="cols-sm-2 control-label">Contrase&ntilde;a<a href=""></a></label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña"/>
+                                    <div class="form-group">
+                                        <label for="contrasena" class="cols-sm-2 control-label">Contrase&ntilde;a<a href=""></a></label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="ConCont" class="cols-sm-2 control-label">Confirmar contrase&ntilde;a</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                        <input type="password" class="form-control" name="ConCont" id="ConCont" placeholder="Vuelva a ingresar su contraseña"/>
+                                    <div class="form-group">
+                                        <label for="ConCont" class="cols-sm-2 control-label">Confirmar contrase&ntilde;a</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="password" class="form-control" name="ConCont" id="ConCont" placeholder="Vuelva a ingresar su contraseña"/>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="form-group ">
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button" id="btnRegistrar">Registrar</button>
+                                    </div>
+                                    <div class="login-register">
+                                        <a href="index.html">Login</a>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group ">
-                                <button type="button" class="btn btn-primary btn-lg btn-block login-button" id="btnRegistrar">Registrar</button>
-                            </div>
-                            <div class="login-register">
-                                <a href="index.html">Login</a>
-                            </div>
-                        </form>
-                    </div>
 
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+    </form>
     
 </body>
 </html>
