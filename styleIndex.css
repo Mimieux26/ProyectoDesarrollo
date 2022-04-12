@@ -8,6 +8,12 @@ body {
     background-attachment: fixed;
 }
 
+/* img {
+    float: left;
+    display: inline block;
+    width: 420px;
+} */
+
 /* Text Align */
 .text-c {
     text-align: center;
