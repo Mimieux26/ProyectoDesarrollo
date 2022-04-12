@@ -48,11 +48,11 @@
 
     </style>
    
-    <title>Document</title>
+    <title>Ingreso de Usuario</title>
 </head>
 <body>
         <div class="container">
-        <form action="" id="formRegister" class="formReg">
+        <form action="#" id="formRegister" class="formReg">
             <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
@@ -78,6 +78,7 @@
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" name="Cedula" id="Cedula" placeholder="Ingrese su n&uacute;mero de identificaci&oacute;n"/>
+                                                <span class="mensaje arrowLeft" id="span-cedula">Seleccione un tipo de identificaci&oacute;n</span>
                                             </div>
                                         </div>
                                     </div>
@@ -99,6 +100,7 @@
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Ingrese su nombre"/>
+                                                <span class="mensaje arrowLeft" id="span-nombre">Ingrese su nombre</span>
                                             </div>
                                         </div>
                                     </div>
@@ -108,6 +110,7 @@
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" name="PriApel" id="PriApel" placeholder="Ingrese su primer apellido"/>
+                                                <span class="mensaje arrowLeft" id="span-pApel">Ingrese su primer apellido</span>
                                             </div>
                                         </div>
                                     </div>
@@ -117,6 +120,7 @@
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" name="SegApel" id="SegApel" placeholder="Ingrese su segundo apellido"/>
+                                                <span class="mensaje arrowLeft" id="span-sApel">Ingrese su primer apellido</span>
                                             </div>
                                         </div>
                                     </div>
@@ -126,6 +130,7 @@
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
                                                 <input type="text" class="form-control" name="Telefono" id="Telefono" placeholder="Ingrese su télefono"/>
+                                                <span class="mensaje arrowLeft" id="span-telefono">Ingrese su n&uacute;mero de telefono (sin espacios o guiones)</span>
                                             </div>
                                         </div>
                                     </div>
@@ -135,6 +140,7 @@
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
                                                 <input type="email" class="form-control" name="Email" id="Email" placeholder="Ingrese su email"/>
+                                                <span class="mensaje arrowLeft" id="span-email">Ingrese su email</span>
                                             </div>
                                         </div>
                                     </div>
@@ -143,7 +149,8 @@
                                         <div class="cols-sm-10">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                                <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña"/>
+                                                <input type="password" class="form-control" name="Contrasena" id="Contrasena" placeholder="Ingrese su contraseña"/>
+                                                <span class="mensaje arrowLeft" id="span-cont">Ingrese una contrase&ntilde;a (8 caracteres minimo, una mayuscula, una minuscula y un caracter especial)</span>
                                             </div>
                                         </div>
                                     </div>
@@ -153,6 +160,7 @@
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
                                                 <input type="password" class="form-control" name="ConCont" id="ConCont" placeholder="Vuelva a ingresar su contraseña"/>
+                                                <span class="mensaje arrowLeft" id="span-conCont">Vuelva a ingresar su contrase&ntilde;a</span>
                                             </div>
                                         </div>
                                     </div>
