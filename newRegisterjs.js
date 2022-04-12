@@ -241,6 +241,9 @@ $(document).ready(function(){
 
         }
 
+        //aqui fue donde me di cuenta, que no voy a andar con sueño todo el dia//
+        // que le vaya bien con el vato que le gusta//
+
 
 
 
