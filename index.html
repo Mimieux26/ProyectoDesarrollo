@@ -4,34 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styleIndex.css">
-    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleIndex.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="indexjs.js"></script>
+    <title>Ingreso de usuarios</title>
 </head>
-<body class="main-bg">
-    <!-- <img src="imagenes/portadaLogin.png" alt="Portada Log In"> -->
-    <div class="login-container text-c animated flipInX">
-       
-            <div>
-                <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
-            </div>
-                <h3 class="text-whitesmoke" style="margin-top: 70px;">Ingreso de usuarios</h3>
-            <div class="container-content">
-                <form class="margin-t">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Usuario" required="">
+<body>
+    <form class="formIndex">
+        <div class="container-fluid ps-md-0">
+            <div class="row g-0">
+              <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+              <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-9 col-lg-8 mx-auto">
+                        <h3 class="login-heading mb-4">¡¡Bienvenido!!</h3>
+          
+                        <!-- Sign In Form -->
+                        <form>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Cedula" placeholder="Ejemplo: 123456789">
+                            <span class="mensaje arrowLeft" id="span-cedula"></span>
+                            <label for="floatingInput">N&uacute;mero de c&eacute;dula</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="Contrasena" placeholder="Contraseña">
+                            <span class="mensaje arrowLeft" id="span-contrasena"></span>
+                            <label for="floatingPassword">Contrase&ntilde;a</label>
+                          </div>
+                          <div class="d-grid">
+                            <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit" id="submitLogin">Ingresar</button>
+                            <div class="text-center">
+                              <a class="small" href="newRegister.html">¿No tiene usuario?</a>
+                            </div>
+                          </div>
+          
+                        </form>
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Contraseña" required="">
-                    </div>
-                    <button type="submit" class="form-button button-l margin-b">Ingresar</button>
-    
-                   
-                    <p class="text-whitesmoke text-center"><small>¿No tiene usuario?</small></p>
-                    <a class="text-darkyellow" href="newRegister.html"><small>Nuevo usuario</small></a>
-                </form>
-                <p class="margin-t text-whitesmoke"><small> RoNi&copy; 2022</small> </p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
+
+    </form>
+
 </body>
 </html>

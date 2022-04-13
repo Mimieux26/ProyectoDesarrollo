@@ -154,7 +154,7 @@ $(document).ready(function(){
         }
 
         var Telefono=$("#Telefono").val();
-        if(Telefono==""|| Telefono.length!=8){
+        if(Telefono==""|| Telefono.length!=8|| isNaN(Telefono)==false){
             if($("#Telefono").hasClass('green-alert')==true){
                 $("#Telefono").removeClass('green-alert');
 
@@ -241,8 +241,7 @@ $(document).ready(function(){
 
         }
 
-        //aqui fue donde me di cuenta, que no voy a andar con sueño todo el dia//
-        // que le vaya bien con el vato que le gusta//
+       
 
 
 
