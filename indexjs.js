@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $("#submitLogin").click(function(){
+    $("#submitLogin").click(function(event){
+        event.preventDefault();
+        
         var Cedula=$("#Cedula").val();
         if(Cedula==""){
             if($("#Cedula").hasClass('green-alert')==true){
@@ -48,18 +50,24 @@ $(document).ready(function(){
         $.ajax({
             url: "consultIndex.php",
             method: "POST",
-            data:{cedulaIng: Cedula},
+            data:{cedulaIng: Cedula,contrasenaIng: Contrasena},
             dataType:'JSON',
-            success: function(dataResponse,responseText,response,statusText,responseJSON){
+            success: function(dataResponse,responseText,response,statusText){
+                
+                if(dataResponse==null){
+                    alert("El usuario no existe o la contraseña es incorrecta");
+                    return false;
+                }else{
+                    location.replace("");//-----> Aca va la pagina del main//
+                }
+                
 
-
-   
     
             }
     
         });
 
-        return false;
+        
 
 
 

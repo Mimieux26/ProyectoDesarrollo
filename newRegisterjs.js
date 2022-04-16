@@ -154,7 +154,8 @@ $(document).ready(function(){
         }
 
         var Telefono=$("#Telefono").val();
-        if(Telefono==""|| Telefono.length!=8|| isNaN(Telefono)==false){
+        console.log(Telefono);
+        if(Telefono==""|| Telefono.length!=8 || isNaN(Telefono)){
             if($("#Telefono").hasClass('green-alert')==true){
                 $("#Telefono").removeClass('green-alert');
 
@@ -240,7 +241,37 @@ $(document).ready(function(){
             $("#span-conCont").text("Listo");
 
         }
+        var registerJSON={
+            "TipIde": TipIden,
+            "Cedula": Cedula,
+            "Nombre": Nombre,
+            "PriApel": PriApel,
+            "SegApel": SegApel,
+            "Telefono": Telefono,
+            "Email": Email,
+            "Contrasena": Contrasena
 
+        };
+
+        $.ajax({
+            url: "insertRegister.php",
+            method: "POST",
+            data:{objJSON: JSON.stringify(registerJSON)},
+            dataType:'JSON',
+            success: function(dataResponse,responseText,response,statusText){
+                console.log(dataResponse);
+
+ 
+                
+
+    
+            }
+    
+        });
+
+        return false;
+
+ 
        
 
 
