@@ -43,20 +43,23 @@ $(document).ready(function(){
 
         }
 
+        
+
         $.ajax({
             url: "consultIndex.php",
             method: "POST",
             data:{cedulaIng: Cedula},
-            success: function(dataResponse,responseText,response,statusText){
-            // ACA QUEDE, TRAER DATOS DE DB//    
-                
-                
+            dataType:'JSON',
+            success: function(dataResponse,responseText,response,statusText,responseJSON){
+
+
+   
     
             }
     
         });
 
-
+        return false;
 
 
 
