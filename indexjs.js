@@ -58,7 +58,7 @@ $(document).ready(function(){
                     alert("El usuario no existe o la contraseña es incorrecta");
                     return false;
                 }else{
-                    location.replace("");//-----> Aca va la pagina del main//
+                    location.replace("mainMenu.html");//-----> Aca va la pagina del main//
                 }
                 
 

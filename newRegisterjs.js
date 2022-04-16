@@ -154,7 +154,6 @@ $(document).ready(function(){
         }
 
         var Telefono=$("#Telefono").val();
-        console.log(Telefono);
         if(Telefono==""|| Telefono.length!=8 || isNaN(Telefono)){
             if($("#Telefono").hasClass('green-alert')==true){
                 $("#Telefono").removeClass('green-alert');
@@ -242,8 +241,9 @@ $(document).ready(function(){
 
         }
         var registerJSON={
-            "TipIde": TipIden,
+            "TipIden": TipIden,
             "Cedula": Cedula,
+            "IDRol" : "2",// Hay que ver que se hace con el id rol, ya que dependiendo del mismo, puede tener acceso o no a ciertas cosas//
             "Nombre": Nombre,
             "PriApel": PriApel,
             "SegApel": SegApel,
@@ -259,7 +259,14 @@ $(document).ready(function(){
             data:{objJSON: JSON.stringify(registerJSON)},
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
-                console.log(dataResponse);
+
+                if(dataResponse==1){
+                alert("Se ha registrado con exito");
+                location.replace("index.html");
+            }
+            else{
+                alert("Ha ocurrido un error");
+            }
 
  
                 
@@ -269,7 +276,7 @@ $(document).ready(function(){
     
         });
 
-        return false;
+        
 
  
        
