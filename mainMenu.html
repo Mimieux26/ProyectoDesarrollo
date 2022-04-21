@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="mainMenujs.js"></script>
     <title>Document</title>
 
     <!--Style CSS -->
@@ -17,29 +19,31 @@
 
 
     <!-- CONSULTAS -->
-    <section>
-        <h2 class = "title_principal"> Seleccione </h2>
-        <div class ="container grid-3">
-            <div class="container-cajas"> 
-                <i class="fas fa-info-circle icon"></i>
-                <h5 class ="title"> Información General </h4>
-                <P class ="text"> Información importante sobre nuestras capacitaciones.</P>
-                <a href="informacion.html" class = "boton" type = "submit" name ="btn_info" >Ver más</a>
+    <form action="">
+        <section>
+            <h2 class = "title_principal"> Seleccione </h2>
+            <div class ="container grid-3">
+                <div class="container-cajas"> 
+                    <i class="fas fa-info-circle icon"></i>
+                    <h5 class ="title"> Información General </h4>
+                    <P class ="text"> Información importante sobre nuestras capacitaciones.</P>
+                    <a href="informacion.html" class = "boton" type = "submit" name ="btn_info" >Ver más</a>
+                </div>
+                <div class="container-cajas"> 
+                    <i class="fas fa-sign-in-alt icon"></i>
+                    <h5 class ="title"> Regístrate</h4>
+                    <p class ="text"> Inscribir y elegir los días que desees para las capacitaciones.</p>
+                    <a href="registrar.php" class = "boton" type = "submit" name ="btn_regis">Ver más</a>
+                </div>
+                <div class="container-cajas"> 
+                    <i class="fas fa-question-circle icon"></i>
+                    <h5 class ="title"> Consulta tus clases </h4>
+                    <p class ="text"> Consulta los enlaces de zoom de las capacitaciones.</p>
+                    <a href="consultar.php" class = "boton" type = "submit" name ="btn_consul" >Ver más</a>
+                </div>
             </div>
-            <div class="container-cajas"> 
-                <i class="fas fa-sign-in-alt icon"></i>
-                <h5 class ="title"> Regístrate</h4>
-                <p class ="text"> Inscribir y elegir los días que desees para las capacitaciones.</p>
-                <a href="registrar.php" class = "boton" type = "submit" name ="btn_regis">Ver más</a>
-            </div>
-            <div class="container-cajas"> 
-                <i class="fas fa-question-circle icon"></i>
-                <h5 class ="title"> Consulta tus clases </h4>
-                <p class ="text"> Consulta los enlaces de zoom de las capacitaciones.</p>
-                <a href="consultar.php" class = "boton" type = "submit" name ="btn_consul" >Ver más</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </form>
 
     
 </body>
