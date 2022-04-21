@@ -1,0 +1,191 @@
+body {
+    background-color:#e7ceb4;
+    margin: 0;
+    color:white;
+}
+
+.header .navbar{
+    background-color:#e7ceb4;
+    margin-left: 1000px;
+}
+
+.header a{
+    margin-left: 50px;
+}
+.container{
+    width: 1000px;
+    padding: 4rem 4rem;
+    margin-top: -25px;  
+    margin-left: 190px;   
+}
+
+
+/*Menu*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--blanco);
+	font-size: 40px;
+}
+
+.header .icon{
+    font-size: 15px;
+    color: black;
+    
+}
+
+/*menu*/
+
+/*Cajas*/
+.grid-3{
+    display: grid;
+    column-gap: 1cm;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1600px;
+    height: 550px;  
+    text-align: center;
+}
+
+.grid-3 div{
+    /**background-color: rgba(224, 180, 180, 0.849);**/
+    background-color: #6E3921;
+    margin-bottom: 10px;
+}
+.grid-3 .icon{
+    font-size: 40px;
+    margin-top: 35px; 
+}
+.grid-3 div:hover{
+    border: 2px outset rgba(255, 128, 23, 0.623);  
+    cursor: pointer;
+}
+
+
+
+
+/*botones cajas*/
+.boton{
+    text-decoration:none;
+    font-size: 15px;
+    color:#333333;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    background-color: #D5CEC8;
+    border-color: #d8d8d8;
+    border-width: 2px;
+    border-style: solid;
+    border-radius:35px;
+    text-align: center;
+    margin-top: 20px;
+}
+/*botones cajas*/
+
+/*titulos cajas*/
+.title{
+    padding: 0.5rem 0;
+    text-align: center;
+    margin-top: 6px;   
+}
+.title_principal{
+    text-align: center; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin-top: 55px;
+    color: black;
+}
+
+.text{   
+    margin: 0;
+    margin-top: 6px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+/*Cajas*/
+
+
+
+.start {
+    color: green
+}
+
+.stop {
+    color: red
+}
+
+.rate {
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+    position: relative;
+    width: 1em;
+    font-size: 30px;
+    font-weight: 300;
+    color: #FFD600;
+    cursor: pointer
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
+}
+
+.buttons {
+    top: 36px;
+    position: relative
+}
+
+.rating-submit {
+    border-radius: 15px;
+    color: #fff;
+    height: 49px
+}
+
+.rating-submit:hover {
+    color: #fff
+}
