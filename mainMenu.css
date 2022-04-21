@@ -1,25 +1,30 @@
 body {
-    background-color:#D5CEC8;
+    background-color:#e7ceb4;
     margin: 0;
     color:white;
 }
 
-.header {
-    height: 75vh;
-    width: 100%;
-    background-image: url(imagenes/BannerMaquinaria.png);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position:initial;
-    display: block;
+.header .navbar{
+    background-color:#e7ceb4;
+    margin-left: 1000px;
 }
 
+.header a{
+    margin-left: 50px;
+}
 .container{
     width: 1000px;
     padding: 4rem 4rem;
     margin-top: -25px;  
-    margin-left: 155px;   
+    margin-left: 190px;   
 }
+
+.container1{
+    padding: 4rem 4rem;
+    margin-top: -25px;  
+    margin-left: 10px;   
+}
+
 /*Menu*/
 * {
 	margin: 0;
@@ -30,6 +35,7 @@ body {
 	width: 90%;
 	margin: auto;
 }
+
 header {
 	padding: 30px 0;
 }
@@ -45,6 +51,12 @@ header .logotipo {
 	font-size: 40px;
 }
 
+.header .icon{
+    font-size: 15px;
+    color: black;
+    
+}
+
 /*menu*/
 
 /*Cajas*/
@@ -53,9 +65,10 @@ header .logotipo {
     column-gap: 1cm;
     grid-template-columns: 1fr 1fr 1fr;
     width: 1200px;
-    height: 300px;  
+    height: 350px;  
     text-align: center;
 }
+
 .grid-3 div{
     /**background-color: rgba(224, 180, 180, 0.849);**/
     background-color: #6E3921;
@@ -63,12 +76,39 @@ header .logotipo {
 }
 .grid-3 .icon{
     font-size: 40px;
-    margin-top: 10px;
+    margin-top: 35px; 
 }
 .grid-3 div:hover{
     border: 2px outset rgba(255, 128, 23, 0.623);  
     cursor: pointer;
 }
+
+
+.grid-4{
+    display: grid;
+    column-gap: 1cm;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1500px;
+    height: 350px;  
+    text-align: center;
+}
+
+.grid-4 div{
+    /**background-color: rgba(224, 180, 180, 0.849);**/
+    background-color: #6E3921;
+    margin-bottom: 10px;
+}
+.grid-4 .icon{
+    font-size: 40px;
+    margin-top: 35px;
+   
+}
+.grid-4 div:hover{
+    border: 2px outset rgba(255, 128, 23, 0.623);  
+    cursor: pointer;
+} 
+
+
 /*botones cajas*/
 .boton{
     text-decoration:none;
@@ -83,9 +123,10 @@ header .logotipo {
     border-style: solid;
     border-radius:35px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 /*botones cajas*/
+
 /*titulos cajas*/
 .title{
     padding: 0.5rem 0;
@@ -95,7 +136,7 @@ header .logotipo {
 .title_principal{
     text-align: center; 
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    margin-top: -55px;;
+    margin-top: 55px;
     color: black;
 }
 
