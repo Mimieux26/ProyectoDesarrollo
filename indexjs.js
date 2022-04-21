@@ -53,19 +53,25 @@ $(document).ready(function(){
             data:{cedulaIng: Cedula,contrasenaIng: Contrasena},
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
+                console.log(dataResponse);
                 
                 if(dataResponse==null){
                     alert("El usuario no existe o la contraseña es incorrecta");
                     return false;
                 }else{
+                    
                     location.replace("mainMenu.html");//-----> Aca va la pagina del main//
                 }
+
+            
                 
 
     
             }
     
         });
+
+       
 
         
 
