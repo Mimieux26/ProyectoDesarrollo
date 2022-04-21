@@ -243,7 +243,7 @@ $(document).ready(function(){
         var registerJSON={
             "TipIden": TipIden,
             "Cedula": Cedula,
-            "IDRol" : "2",// Hay que ver que se hace con el id rol, ya que dependiendo del mismo, puede tener acceso o no a ciertas cosas//
+            "IDRol" : "1",//Hay que ver que se hace con el id rol, ya que dependiendo del mismo, puede tener acceso o no a ciertas cosas//
             "Nombre": Nombre,
             "PriApel": PriApel,
             "SegApel": SegApel,
