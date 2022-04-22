@@ -9,7 +9,7 @@ $usuario=mysqli_fetch_assoc(mysqli_query($conexion,$sql));
 
 if($usuario!=null){
     session_start();
-    $_SESSION['sessionUser']=array();
+
     $_SESSION['sessionUser']['usuario']=$cedulaIng;
     $_SESSION['sessionUser']['idRol']=$usuario['IDRol'];
 }
