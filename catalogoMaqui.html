@@ -23,6 +23,7 @@
     <link href="catalogo.css" rel="stylesheet">   
     
     <!--JS -->
+    <script src="catalogoMaqui.js"></script>  
     
 
 </head>
@@ -37,6 +38,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="fa fa-shopping-cart" id="CarritoVentana" aria-hidden="true"></a>
+          </li>
           <li class="nav-item">
             <a class="fa fa-sign-out icon" class="nav-link" href="#"> Cerrar Sesión </a>
           </li>
@@ -53,13 +57,7 @@
         <img class="card-img-top" src="imagenes/tractor.jfif" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Tractores</h5>
-          <p class="card-text">Quedan 2, quien da mas?</p>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">
-            Agregar al Carrito
-          </button>
-          
-          <!-- <a href="#" class="btn btn-primary" >Agregar al Carrito</a> -->
-         
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" id="1"> Detalles </button>
         </div>
       </div>
 
@@ -67,8 +65,7 @@
           <img class="card-img-top" src="imagenes/sembradora1.png" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Sembradoras</h5>
-            <p class="card-text">.</p>
-            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" id="3"> Detalles </button>
           </div>
       </div>
 
@@ -76,8 +73,7 @@
           <img class="card-img-top" src="imagenes/Cosechadora.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Cosechadoras</h5>
-            <p class="card-text">.</p>
-            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" id="4"> Detalles </button>
           </div>
       </div>
 
@@ -85,8 +81,7 @@
           <img class="card-img-top" src="imagenes/Pulverizadora.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Pulverizadoras</h5>
-            <p class="card-text">.</p>
-            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" id="5"> Detalles </button>
           </div>
       </div>
 
@@ -94,8 +89,7 @@
           <img class="card-img-top" src="imagenes/Fertilizadores.jfif" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Fertilizadores</h5>
-            <p class="card-text">.</p>
-            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" id="6"> Detalles </button>
           </div>
       </div>
 
@@ -103,8 +97,7 @@
           <img class="card-img-top" src="imagenes/Rastras.png" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Rastras</h5>
-            <p class="card-text">.</p>
-            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" id="7"> Detalles </button>
           </div>
       </div>
 
@@ -112,8 +105,7 @@
           <img class="card-img-top" src="imagenes/Picadora" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Picadora de Forraje</h5>
-            <p class="card-text">.</p>
-            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" id="8"> Detalles </button>
           </div>
       </div>
 
@@ -121,8 +113,7 @@
           <img class="card-img-top" src="imagenes/CortaCesped.webp" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Corta Cesped</h5>
-            <p class="card-text">.</p>
-            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" id="9"> Detalles </button>
           </div>
       </div>
 
@@ -141,12 +132,12 @@
           </div>
           <div class="modal-body">
             <div class= "alert alert-success"> 
-              <h1> HOAL </h1>
+              <h1 id="DesMaqu"> Hola </h1>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Añadir al Carrito</button>
           </div>
         </div>
       </div>
