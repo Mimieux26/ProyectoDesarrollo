@@ -24,6 +24,8 @@ $arregloPadre = [];
 
     }
 
-    echo json_encode($arregloPadre)
+    echo json_encode($arregloPadre);
 
 ?>
+
+
