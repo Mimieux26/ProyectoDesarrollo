@@ -12,6 +12,8 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[0]['Nombre']);
                 $("#DesMaqu").html(maquinas[0]['Descripcion']);
+                $("#CantidadMaquina").val("");
+
             }
         });
 
@@ -30,6 +32,7 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[1]['Nombre']);
                 $("#DesMaqu").html(maquinas[1]['Descripcion']);
+                $("#CantidadMaquina").val("");
             }
         });
 
@@ -47,6 +50,7 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[2]['Nombre']);
                 $("#DesMaqu").html(maquinas[2]['Descripcion']);
+                $("#CantidadMaquina").val("");
             }
         });
 
@@ -64,6 +68,7 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[3]['Nombre']);
                 $("#DesMaqu").html(maquinas[3]['Descripcion']);
+                $("#CantidadMaquina").val("");
             }
         });
 
@@ -81,6 +86,7 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[4]['Nombre']);
                 $("#DesMaqu").html(maquinas[4]['Descripcion']);
+                $("#CantidadMaquina").val("");
             }
         });
 
@@ -98,6 +104,7 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[5]['Nombre']);
                 $("#DesMaqu").html(maquinas[5]['Descripcion']);
+                $("#CantidadMaquina").val("");
             }
         });
 
@@ -115,6 +122,7 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[6]['Nombre']);
                 $("#DesMaqu").html(maquinas[6]['Descripcion']);
+                $("#CantidadMaquina").val("");
             }
         });
 
@@ -132,6 +140,7 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[7]['Nombre']);
                 $("#DesMaqu").html(maquinas[7]['Descripcion']);
+                $("#CantidadMaquina").val("");
             }
         });
 
