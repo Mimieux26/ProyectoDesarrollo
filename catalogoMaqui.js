@@ -12,6 +12,7 @@ $(document).ready(function(){
 
                 $("#VentanaTitulo").html(maquinas[0]['Nombre']);
                 $("#DesMaqu").html(maquinas[0]['Descripcion']);
+                $("#precioMaqui").html("Precio: ₡"+maquinas[0]['Precio']);
                 $("#CantidadMaquina").val("");
             }
         });
