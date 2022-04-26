@@ -3,7 +3,7 @@ $(document).ready(function(){
     $("#1").click(function(){
 
         $.ajax({
-            url: "consCatalogo.php",
+            url: "../PHP/consCatalogo.php",
             method: "POST",
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
@@ -23,7 +23,7 @@ $(document).ready(function(){
     $("#3").click(function(){
 
         $.ajax({
-            url: "consCatalogo.php",
+            url: "../PHP/consCatalogo.php",
             method: "POST",
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
@@ -41,7 +41,7 @@ $(document).ready(function(){
     $("#4").click(function(){
 
         $.ajax({
-            url: "consCatalogo.php",
+            url: "../PHP/consCatalogo.php",
             method: "POST",
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
@@ -59,7 +59,7 @@ $(document).ready(function(){
     $("#5").click(function(){
 
         $.ajax({
-            url: "consCatalogo.php",
+            url: "../PHP/consCatalogo.php",
             method: "POST",
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
@@ -77,7 +77,7 @@ $(document).ready(function(){
     $("#6").click(function(){
 
         $.ajax({
-            url: "consCatalogo.php",
+            url: "../PHP/consCatalogo.php",
             method: "POST",
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
@@ -95,7 +95,7 @@ $(document).ready(function(){
     $("#7").click(function(){
 
         $.ajax({
-            url: "consCatalogo.php",
+            url: "../PHP/consCatalogo.php",
             method: "POST",
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
@@ -113,7 +113,7 @@ $(document).ready(function(){
     $("#8").click(function(){
 
         $.ajax({
-            url: "consCatalogo.php",
+            url: "../PHP/consCatalogo.php",
             method: "POST",
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
@@ -131,7 +131,7 @@ $(document).ready(function(){
     $("#9").click(function(){
 
         $.ajax({
-            url: "consCatalogo.php",
+            url: "../PHP/consCatalogo.php",
             method: "POST",
             dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){

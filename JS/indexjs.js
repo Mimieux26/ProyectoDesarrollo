@@ -48,7 +48,7 @@ $(document).ready(function(){
         
 
         $.ajax({
-            url: "consultIndex.php",
+            url: "../PHP/consultIndex.php",
             method: "POST",
             data:{cedulaIng: Cedula,contrasenaIng: Contrasena},
             dataType:'JSON',
@@ -60,7 +60,7 @@ $(document).ready(function(){
                     return false;
                 }else{
                     
-                    location.replace("mainMenu.html");//-----> Aca va la pagina del main//
+                    location.replace("../HTML/mainMenu.html");//-----> Aca va la pagina del main//
                 }
 
             
