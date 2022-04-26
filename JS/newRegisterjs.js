@@ -254,7 +254,7 @@ $(document).ready(function(){
         };
 
         $.ajax({
-            url: "insertRegister.php",
+            url: "../PHP/insertRegister.php",
             method: "POST",
             data:{objJSON: JSON.stringify(registerJSON)},
             dataType:'JSON',
@@ -262,7 +262,7 @@ $(document).ready(function(){
 
                 if(dataResponse==1){
                 alert("Se ha registrado con exito");
-                location.replace("index.html");
+                location.replace("../HTML/index.html");
             }
             else{
                 alert("Ha ocurrido un error");

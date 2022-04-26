@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var idRol;
     $.ajax({
-        url: "mainMenuphp.php",
+        url: "../PHP/mainMenuphp.php",
         method: "POST",
         success: function(dataResponse,responseText,response,statusText){
             
