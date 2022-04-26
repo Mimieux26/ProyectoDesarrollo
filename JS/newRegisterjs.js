@@ -514,7 +514,7 @@ $(document).ready(function(){
         };
 
         $.ajax({
-            url: "updateRegister.php",
+            url: "../PHP/updateRegister.php",
             method: "POST",
             data:{objJSON: JSON.stringify(updateRegisterJSON)},
             dataType:'JSON',
@@ -550,7 +550,7 @@ $(document).ready(function(){
 
     var idRol;
     $.ajax({
-        url: "mainMenuphp.php",
+        url: "../PHP/mainMenuphp.php",
         method: "POST",
         success: function(dataResponse,responseText,response,statusText){
             
@@ -572,7 +572,7 @@ $(document).ready(function(){
                 
 
                 $.ajax({
-                    url: "consultRegister.php",
+                    url: "../PHP/consultRegister.php",
                     method: "POST",
                     success: function(dataResponse,responseText,response,statusText){
                         
@@ -650,7 +650,7 @@ $(document).ready(function(){
 function show_user(valor){
 
     $.ajax({
-        url: "selectRegister.php",
+        url: "../PHP/selectRegister.php",
         data: {Cedula: valor},
         method: "POST",
         dataType:'JSON',
