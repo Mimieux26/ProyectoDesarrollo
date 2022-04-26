@@ -12,15 +12,16 @@ $PriApel=$json_obj->{"PriApel"};
 $SegApel=$json_obj->{"SegApel"};
 $Telefono=$json_obj->{"Telefono"};
 $Email=$json_obj->{"Email"};
-$Contrasena=$json_obj->{"Contrasena"};
-
-$sql="INSERT INTO usuarios (Cedula,TipIden,IDRol,Nombre,PriApel,SegApel,Telefono,Email,Contrasena) 
-          VALUES('$Cedula','$TipIden','$IDRol','$Nombre','$PriApel','$SegApel','$Telefono','$Email','$Contrasena')";
 
 
+$sql="UPDATE usuarios SET Cedula='$Cedula',TipIden='$TipIden',IDRol='$IDRol',Nombre='$Nombre',PriApel='$PriApel',
+        SegApel='$SegApel',Telefono='$Telefono',Email='$Email' WHERE Cedula=".$Cedula;
+
+echo mysqli_query($conexion,$sql);        
 
 
-echo mysqli_query($conexion,$sql);
+
+
 
 
 ?>

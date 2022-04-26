@@ -52,13 +52,29 @@
 </head>
 <body>
     <div class="container">
-    <form id="formRegister" class="formReg" method="post">
+    <form  class="formReg" method="post">
         <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-10">
+                    <div id="infoUser">
+                        <div class="container" id="table">
+                            <table class="table table-sm table-bordered" id="tablaUsuarios">
+                            <tr>
+                                <th>Numero de identificacion</th>
+                                <th>Tipo de identificacion</th>
+                                <th>Id de rol</th>
+                                <th>Nombre</th>
+                                <th>Primer Apellido</th>
+                                <th>Segundo Apellido</th>
+                                <th>Telefono</th>
+                                <th>Email</th>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
                     <div class="card">
                         <div class="card-header">Registro</div>
-                        <div class="card-body">
-                            <form class="form-horizontal" method="post" action="#">
+                        <div class="card-body" id="insertUser">
+                            <form class="form-horizontal" method="post" action="#" id="formRegister">
                                 <div class="form-group">
                                     <label for="TipIden" class="cols-sm-2 control-label">Tipo de identificaci&oacute;n</label>
                                     <div class="cols-sm-10">
@@ -82,7 +98,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group" hidden id="divRol">
+                                <div class="form-group" id="divRol">
                                     <label for="IDRol" class="cols-sm-2 control-label" >Tipo de rol</label>
                                     <div class="cols-sm-10">
                                         <div class="input-group">
@@ -91,6 +107,7 @@
                                                 <option value="1">Usuario regular</option>
                                                 <option value="2">Usuario administrador</option>
                                             </select>
+                                            <span class="mensaje arrowLeft" id="span-rol">Seleccione un tipo de rol</span>
                                         </div>
                                     </div>
                                 </div>
@@ -144,7 +161,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="divContrasena">
                                     <label for="contrasena" class="cols-sm-2 control-label">Contrase&ntilde;a<a href=""></a></label>
                                     <div class="cols-sm-10">
                                         <div class="input-group">
@@ -154,7 +171,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" id="divConCont">
                                     <label for="ConCont" class="cols-sm-2 control-label">Confirmar contrase&ntilde;a</label>
                                     <div class="cols-sm-10">
                                         <div class="input-group">
@@ -166,6 +183,7 @@
                                 </div>
                                 <div class="form-group ">
                                     <button type="submit" class="btn btn-primary btn-lg btn-block login-button" id="btnRegistrar">Registrar</button>
+                                    <button type="button" class="btn btn-warning btn-lg btn-block login-button"id="btnActualizar">Actualizar</button>
                                 </div>
                                 <div class="login-register">
                                     <a href="index.html">Login</a>
