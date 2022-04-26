@@ -145,6 +145,16 @@ $(document).ready(function(){
         });
 
     });
+
+    $("#btn_carrito").click(function(){
+
+        // Tiene que agarrar el id del producto no se como porque es independiente
+        // Luego hacer la inserción a la base de datos
+        //Traerse la cantidad que quiere
+
+    });
+
+
        
 
 
