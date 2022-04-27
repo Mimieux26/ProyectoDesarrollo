@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Maquinaria</title>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+ 
+    <script src="../JS/adminMachinejs.js"></script>
+
+    <style>
+      .red-alert{
+          border-color: red;
+      }
+      .green-alert{
+          border-color:chartreuse;
+          
+      }
+      .mensaje {
+          top:2px;
+          position:absolute;
+          margin-left:500px;
+          margin-top: -30px;
+          padding:10px;
+          border-radius:5px;
+          -moz-border-radius:5px;
+          -webkit-border-radius:5px;
+          min-height:30px;
+          background-color:#ccc;
+          z-index: 5;
+      }
+   
+      .arrowLeft::after {
+          position:absolute;
+          left:-20px;
+          top:15px;
+          content:"\00a0";
+          display:block;
+          width:0px;
+          height:0px;
+          border-width:10px 20px 10px 10px;
+          border-style:solid;
+          border-color:transparent #ccc transparent transparent;
+      }
+
+      .formReg span {display:none}
+      .formReg p {position:relative;}
+
+      textarea{
+
+        resize: none;
+      }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="row justify-content-center">
+              <div class="col-md-10">
+                  <div id="infoUser">
+                      <div class="container" id="tableMachine">
+                          <table class="table table-sm table-bordered" id="tablaMaquina">
+                          <tr>
+                              <th>Id articulo</th>  
+                              <th>Nombre</th>
+                              <th>Descripcion</th>
+                              <th>Precio</th>
+                              <th>Estado</th>
+                          </tr>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <div class="card-header">Registro de Maquinaria</div>
+                      <input type="text" hidden value="" id="idArt">
+                      <div class="card-body" id="insertUser">
+                          <form class="form-horizontal formReg" method="post" action="#" id="formRegister">
+                            <div class="form-group">
+                                <label for="nombreMaqui" class="cols-sm-2 control-label">Id articulo</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" id="idMaqui" disabled placeholder="El id se asigna automaticamente"/>
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="form-group">
+                                  <label for="nombreMaqui" class="cols-sm-2 control-label">Nombre de maquina</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                        <input type="text" class="form-control" id="nombreMaqui" placeholder="Ej: Tractor"/>
+                                        <span class="mensaje arrowLeft" id="span-nomMaqui">Ingrese el nombre de la maquina</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="cols-sm-2 control-label">Descripcion</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                          <textarea class="form-control" cols="30" rows="10"  id="descMaqui" maxlength="100" placeholder="Ej: Diesel, traccion delantela"></textarea>
+                                          <span class="mensaje arrowLeft" id="span-descM">Ingrese la descripcion de la maquina</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="cols-sm-2 control-label">Precio</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon">₡<i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                          <input type="text" class="form-control"  id="precioMaqui" placeholder="₡00000"/>
+                                          <span class="mensaje arrowLeft" id="span-precioM">Ingrese el precio de renta</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label  class="cols-sm-2 control-label">Estado</label>
+                                  <div class="cols-sm-10">
+                                      <div class="input-group">
+                                          <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                          <select id="estadoMaqui" class="form-control">
+                                            <option value="0">Seleccione</option>
+                                            <option value="Disponible">Disponible</option>
+                                            <option value="No disponible">No disponible</option>
+                                          </select>
+                                          <span class="mensaje arrowLeft" id="span-estadoM">Seleccione el estado de la maquina</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group ">
+                                  <button type="submit" class="btn btn-primary btn-lg btn-block login-button" id="btnRegistrar">Registrar</button>
+                                  <button type="button" class="btn btn-warning btn-lg btn-block login-button"id="btnActualizar">Actualizar</button>
+                              </div>
+                              <div id="dialogConfirm"><span id="spanMessage"></span></div>
+                              <div class="login-register">
+                                  <a href="mainMenu.html">Regresar al men&uacute; principal</a>
+                              </div>
+                          </form>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+</body>
+</html>
