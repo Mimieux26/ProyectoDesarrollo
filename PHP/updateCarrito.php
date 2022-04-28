@@ -4,13 +4,13 @@ include("conexion.php");
 $obj=$_REQUEST["objCarJSON"];
 $car_obj=json_decode($obj);
 
-$IDArti=$car_obj->{"IDArti"};
-$IDCar=$car_obj->{"IDCar"};
-$FecEntr=$car_obj->{"FecEntr"};
 $MonTota=$car_obj->{"MonTota"};
+$IDCar=$car_obj->{"IDCar"};
+$IDArti=$car_obj->{"IDArti"};
 
 
-$sql="UPDATE carrito SET FecEntr='$FecEntr', MonTota='$MonTota' WHERE IDArti='$IDArti' AND IDCar='$IDCar'";
+
+$sql="UPDATE carrito SET MonTota='$MonTota' WHERE IDArti='$IDArti' AND IDCar='$IDCar'";
 
 
 
