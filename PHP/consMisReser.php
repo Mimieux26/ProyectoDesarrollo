@@ -2,7 +2,7 @@
 
 include("conexion.php");
 
-$sql="SELECT r.IDRese, r.LugEntr, r.MonOrde, r.MetPago, c.FecEntr FROM reservas r INNER JOIN carrito c WHERE r.IDCar = c.IDCar";
+$sql="SELECT r.IDRese, r.LugEntr, r.MonOrde, r.MetPago r.FecEntr FROM reservas r INNER JOIN carrito c WHERE r.IDCar = c.IDCar";
 
 $reservas=array();
 $consulta=mysqli_query($conexion,$sql);

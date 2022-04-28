@@ -3,7 +3,7 @@ include("conexion.php");
 
 
 //Consulta para Printear
-$sql="SELECT a.Nombre, a.IDArti, a.Precio, c.IDCar, CanArt, c.CanDias FROM carrito c INNER JOIN maquinaria a WHERE c.IDArti = a.IDArti";
+$sql="SELECT a.Nombre, a.IDArti, a.Precio, c.IDCar, c.CanArt, c.CanDias, c.Cedula FROM carrito c INNER JOIN maquinaria a WHERE c.IDArti = a.IDArti";
 
 
 $carrito=array();
@@ -14,6 +14,7 @@ while($carrito=mysqli_fetch_array($consulta)){
     echo "<tr>";
     echo "<input type='hidden' id='IDArti' value =".$carrito["IDArti"]."></input>";
     echo "<input type='hidden' id='IDCar' value =".$carrito["IDCar"]."></input>";
+    echo "<input type='hidden' id='Cedula' value =".$carrito["Cedula"]."></input>";
     echo "<td>".$carrito["Nombre"]."</td>";
     echo "<td>".$carrito["Precio"]."</td>";
     echo "<td>".$carrito["CanArt"]."</td>";

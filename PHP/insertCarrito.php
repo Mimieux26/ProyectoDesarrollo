@@ -6,6 +6,7 @@ $CantidadMaqui=$_REQUEST["cantA"];
 $precioMaqui=$_REQUEST["precioM"];
 $CanDias=$_REQUEST["CanDias"];
 
+
 session_start();
 
 $Cedula=$_SESSION['sessionUser']['usuario'];
