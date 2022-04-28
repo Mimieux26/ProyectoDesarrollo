@@ -1,4 +1,7 @@
 <?php
+
+//CERRAR SESION
+
 include("conexion.php");
 session_start();
 
