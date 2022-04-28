@@ -2,14 +2,23 @@
 
 include("conexion.php");
 
-$sql="SELECT r.IDRese, r.LugEntr, r.MonOrde, r.MetPago, r.FecEntr, r.Estado FROM reservas r INNER JOIN carrito c WHERE r.IDCar = c.IDCar";
-
-$reservas=array();
-$consulta=mysqli_query($conexion,$sql);
-
 session_start();
 
 $rol=$_SESSION['sessionUser']['idRol'];
+
+$cedulaUsu=$_SESSION['sessionUser']['usuario'];
+
+$sql2="UPDATE reservas SET MonOrde = (SELECT SUM(MonTota) FROM carrito WHERE Cedula = '$cedulaUsu')";
+$consulta=mysqli_query($conexion,$sql2);
+
+
+$sql="SELECT r.IDRese, r.LugEntr, r.MonOrde, r.MetPago, r.FecEntr, r.Estado FROM reservas r";
+
+
+
+
+$reservas=array();
+$consulta=mysqli_query($conexion,$sql);
 
 $opciones="";
 
