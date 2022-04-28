@@ -6,8 +6,6 @@ $car_obj=json_decode($obj);
 
 $IDArti=$car_obj->{"IDArti"};
 $IDCar=$car_obj->{"IDCar"};
-// $LugEntr=$car_obj->{"LugEntr"};
-// $checkMark=$car_obj->{"checkMark"};
 $FecEntr=$car_obj->{"FecEntr"};
 $MonTota=$car_obj->{"MonTota"};
 

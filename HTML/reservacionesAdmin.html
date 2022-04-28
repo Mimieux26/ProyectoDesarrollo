@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Máquina</title>
+    <title>Administrar Reservaciones</title>
 
     <!-- Boostrap -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -21,6 +21,8 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="../CSS/MisReservaciones.css">
+
+    <script src="../JS/consultReserv.js"></script> 
     
    
 
@@ -48,59 +50,24 @@
     </div>
     </nav>
   </header>
-
-  <section>
+  <form action="" method="post">
     <div class="container">
-
-    
       <div id="accordion">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Reservación #1
-              </button>
-            </h5>
-          </div>
-      
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              <table class="table table-sm">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Máquina</th>
-                    <th scope="col">Día Entrega</th>
-                    <th scope="col">Monto</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Opciones</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>1</th>
-                    <th>Nicoel</th>
-                    <td>Tractot</td>
-                    <td>23/12/2022</td>
-                    <td>45000</td>
-                    <td>Pendiente</td>
-                    <td>
-                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                      <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+        <div class="card" id="accordionReseAdmin">
+
+
         </div>
       </div> 
     </div>
-  </section>
+  </form>
+    <div class="container">
+      <div id="accordion">
+        <div class="card" id="accordionReseAdmin">
 
 
-
+        </div>
+      </div> 
+    </div>
 
 </body>
 </html>
