@@ -26,7 +26,7 @@ while($carrito=mysqli_fetch_array($consulta)){
     echo "<input type='hidden' id='MonTota' value ='$MonTota'></input>";
 
     echo "<td>
-        <button type='button' class='fa fa-minus-circle' aria-hidden='true'></button>
+        <button type='button' class='fa fa-minus-circle' aria-hidden='true' onclick='delete_car(".$carrito["IDCar"].");'></button>
     </td>";
   
     echo "</tr>";

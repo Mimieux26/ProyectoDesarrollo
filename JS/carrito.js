@@ -75,3 +75,24 @@ $(document).ready(function(){
 
 });
 
+function delete_car(valor){
+
+    var IDCar=valor;
+
+    $.ajax({
+        url: "../PHP/deleteCar.php",
+        data: {IDCar: IDCar},
+        method: "POST",
+        success: function(dataResponse,responseText){
+            if(dataResponse==1){
+                alert("Se ha eliminado con exito");
+                location.reload();
+            }
+            
+        }
+
+    });
+
+
+
+}
