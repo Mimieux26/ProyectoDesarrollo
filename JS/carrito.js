@@ -30,17 +30,30 @@ $(document).ready(function(){
             alert ("Por favor ingrese la Fecha de entrega");
         }
 
+        //validacion radio
 
-        //ESTO NO SIRVE EL CHECK
-        var checkMark=$("form-check").val();
-        if (checkMark == ""){
-            alert ("Por favor digite la forma de pago");
+        var greenflag = true;
+        for (x = 0; x < frmCarrito.length; x++) {
+            if((frmCarrito.elements[x].type == "radio") && (frmCarrito.elements[x].name == "radioCheck")){
+
+                if(frmCarrito.elements[x].checked){
+                    greenflag = false;
+                }
+            }
         }
+        if (greenflag){
+            alert("Debe seleccionar una opcion de pago");
+            return false;
+        }
+
+        var ForPago1=$("#ForPago1").val();
+        var ForPago2=$("#ForPago2").val();
 
         var carritoJSON={
             "IDArti":IDArti,
-            // "LugEntr": LugEntr,
-            // "checkMark" : checkMark,
+            "ForPago1":ForPago1,
+            "ForPago2":ForPago2,
+            "LugEntr": LugEntr,
             "FecEntr" : FecEntr,
             "MonTota": MonTota,
             "IDCar":IDCar
