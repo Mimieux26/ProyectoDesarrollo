@@ -12,8 +12,7 @@ $FecEntr=$car_obj->{"FecEntr"};
 $MonTota=$car_obj->{"MonTota"};
 
 
-$sql="UPDATE carrito SET FecEntr='$FecEntr', MonTota='$MonTota'
-    WHERE IDArti='$IDArti'";
+$sql="UPDATE carrito SET FecEntr='$FecEntr', MonTota='$MonTota' WHERE IDArti='$IDArti' AND IDCar='$IDCar'";
 
 
 

@@ -47,9 +47,6 @@ $(document).ready(function(){
 
         };
 
-        console.log(FecEntr);
-        console.log(MonTota);
-
         $.ajax({
             url: "../PHP/updateCarrito.php",
             method: "POST",

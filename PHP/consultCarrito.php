@@ -12,8 +12,8 @@ $consulta=mysqli_query($conexion,$sql);
 
 while($carrito=mysqli_fetch_array($consulta)){
     echo "<tr>";
-    echo "<th hidden id='IDArti'>".$carrito["IDArti"]."</th>";
-    echo "<th hidden id='IDCar'>".$carrito["IDCar"]."</th>";
+    echo "<input type='hidden' id='IDArti' value =".$carrito["IDArti"]."></input>";
+    echo "<input type='hidden' id='IDCar' value =".$carrito["IDCar"]."></input>";
     echo "<td>".$carrito["Nombre"]."</td>";
     echo "<td>".$carrito["Precio"]."</td>";
     echo "<td>".$carrito["CanArt"]."</td>";
