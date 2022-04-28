@@ -18,17 +18,28 @@ $(document).ready(function(){
 
 });
 
-function insert_car(IDArti){
+function insert_car(valor){
+
+    var cantArti=$("#CantidadMaquina").val();
+    if(cantArti==""||cantArti==0){
+        alert("No puede estar vacia la cantidad");
+        return false;
+    }
+
+    var IDArti=valor;
+    var precioMaqui=$("#precioMaqui").val();
 
     $.ajax({
-        url: "../PHP/carrito.php",
-        data: {IDArti: IDArti},
+        url: "../PHP/insertCarrito.php",
+        data: {IdArt: IDArti, cantA: cantArti, precioM: precioMaqui},
         method: "POST",
-        
         success: function(dataResponse,responseText){
+            if(dataResponse==1){
+                alert("Se ha registrado con exito");
+                location.reload();
+            }
             
-            var data=dataResponse;
-            console.log(data);
+ 
 
        
         }

@@ -1,7 +1,7 @@
 <?php
 include("conexion.php");
 
-$sql="SELECT IDArti, Nombre, Descripcion, Precio, Estado, URL FROM maquinaria";
+$sql="SELECT IDArti, Nombre, Descripcion, Precio, Estado, UrlMaqui FROM maquinaria";
 
 $maquinas=array();
 $consulta=mysqli_query($conexion,$sql);
@@ -10,7 +10,7 @@ $consulta=mysqli_query($conexion,$sql);
 
 while($maquinas=mysqli_fetch_array($consulta)){
     echo "<div class='card' style='width: 18rem;'>
-                <img class='card-img-top' src='".$maquinas["URL"]."' alt='Card image cap'>
+                <img class='card-img-top' src='".$maquinas["UrlMaqui"]."' alt='Card image cap'>
                 <div class='card-body' id='body-card'>
                 <h5 class='card-title'>".$maquinas["Nombre"]."</h5>
                 <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#Modal".$maquinas["IDArti"]."' id='".$maquinas["IDArti"]."'> Detalles </button>
