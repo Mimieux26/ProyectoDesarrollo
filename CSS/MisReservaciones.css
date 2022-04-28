@@ -1,11 +1,9 @@
 body {
     background-color:#e7ceb4;
     margin: 0;
-    color:black;
+    color: black;
 }
 
-
-  
 .header .navbar{
     background-color:#e7ceb4;
     margin-left: 1000px;
@@ -14,24 +12,32 @@ body {
 .header a{
     margin-left: 50px;
 }
+.container{
+    width: 1000px;
+    padding: 4rem 4rem;
+    margin-top: -25px;  
+    margin-left: 190px;   
+}
+
+
 
 header {
 	padding: 30px 0;
+}
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--blanco);
+	font-size: 40px;
 }
 
 .header .icon{
     font-size: 15px;
     color: black;
     
-}
-
-h1{
-    text-align: center;
-}
-
-.card{
-    width: 1000px;
-    border-radius: 5px;
-    margin-left: 400px;
-
 }

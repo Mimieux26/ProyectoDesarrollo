@@ -16,7 +16,8 @@ body {
     width: 1000px;
     padding: 4rem 4rem;
     margin-top: -25px;  
-    margin-left: 190px;   
+    margin-left: 350px;   
+    
 }
 
 
@@ -60,7 +61,7 @@ header .logotipo {
     column-gap: 1cm;
     grid-template-columns: 1fr 1fr 1fr;
     width: 1600px;
-    height: 550px;  
+    height: 400px;  
     text-align: center;
 }
 
