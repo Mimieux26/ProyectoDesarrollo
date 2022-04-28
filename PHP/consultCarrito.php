@@ -1,0 +1,41 @@
+<?php
+include("conexion.php");
+
+
+//Consulta para Printear
+$sql="SELECT a.Nombre, a.IDArti, a.Precio, c.IDCar, CanArt, c.CanDias FROM carrito c INNER JOIN maquinaria a WHERE c.IDArti = a.IDArti";
+
+
+$carrito=array();
+$consulta=mysqli_query($conexion,$sql);
+
+
+while($carrito=mysqli_fetch_array($consulta)){
+    echo "<tr>";
+    echo "<th hidden id='IDArti'>".$carrito["IDArti"]."</th>";
+    echo "<th hidden id='IDCar'>".$carrito["IDCar"]."</th>";
+    echo "<td>".$carrito["Nombre"]."</td>";
+    echo "<td>".$carrito["Precio"]."</td>";
+    echo "<td>".$carrito["CanArt"]."</td>";
+    echo "<td>".$carrito["CanDias"]."</td>";
+
+    //Operacion
+    $MonTota = $carrito["Precio"] *  $carrito["CanArt"] * $carrito["CanDias"];
+
+    echo "<td>".$MonTota."</td>";
+    echo "<input type='hidden' id='MonTota' value ='$MonTota'></input>";
+
+    echo "<td>
+        <button type='button' class='fa fa-minus-circle' aria-hidden='true'></button>
+    </td>";
+  
+    echo "</tr>";
+
+}
+
+
+
+
+
+
+?>

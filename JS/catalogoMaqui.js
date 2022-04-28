@@ -26,12 +26,18 @@ function insert_car(valor){
         return false;
     }
 
+    var CanDias=$("#CanDias").val();
+    if(CanDias==""||CanDias==0){
+        alert("No puede estar vacia la cantidad de Días");
+        return false;
+    }
+
     var IDArti=valor;
     var precioMaqui=$("#precioMaqui").val();
 
     $.ajax({
         url: "../PHP/insertCarrito.php",
-        data: {IdArt: IDArti, cantA: cantArti, precioM: precioMaqui},
+        data: {IdArt: IDArti, cantA: cantArti, precioM: precioMaqui, CanDias:CanDias},
         method: "POST",
         success: function(dataResponse,responseText){
             if(dataResponse==1){
@@ -39,9 +45,6 @@ function insert_car(valor){
                 location.reload();
             }
             
- 
-
-       
         }
 
     });

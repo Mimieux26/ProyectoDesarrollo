@@ -53,14 +53,15 @@
     <hr> 
     <!-- TABLA -->
     <div class="container">
-        <table class="table" style="color: black;">
+        <table class="table" style="color: black;" id="tablaCarrito">
             <thead>
               <tr>
                 <th scope="col">Producto</th>
                 <th scope="col">Precio Unidad</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col"></th>
+                <th scope="col">Cantidad de Artículos</th>
+                <th scope="col">Cantidad de Días</th>
                 <th scope="col">Total</th>
+                <th scope="col">Cancelar Reserva</th>
               </tr>
             </thead>
             <tbody>
@@ -77,9 +78,10 @@
             <label>Lugar de Entrega</label>
             <input type="text" class="form-control" id="LugEntr" placeholder="Ej: Cartago">
             </div>
+
             <div class="form-group">
-            <label for="exampleInputPassword1">Días de uso:</label>
-            <input type="text" class="form-control" id="CantDias">
+                <label>Fecha de Entrega</label>
+                <input type="date" class="form-control" id="FecEntr" placeholder="Ej: Cartago">
             </div>
 
             <div class="form-check form-check-inline">
@@ -91,7 +93,7 @@
                 <label class="form-check-label" for="inlineCheckbox2">Transferencia Electrónica</label>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+                <button type="submit" class="btn btn-primary" id="btn_conReserva">Confirmar Reserva</button>
             </div>
         </form>
 

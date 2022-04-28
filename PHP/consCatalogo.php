@@ -32,7 +32,8 @@ while($maquinas=mysqli_fetch_array($consulta)){
                   </div>
                   <div class='col-sm-2'>
                     <h6 id='precioMaqui'>Precio: ₡".$maquinas["Precio"]."</h6>
-                    Cantidad:<input type='number' id='CantidadMaquina' placeholder='Ingrese cantidad'></input>
+                    Cantidad de Artículos:<input type='number' id='CantidadMaquina' placeholder='Ingrese cantidad'></input>
+                    Días de uso:<input type='number' id='CanDias' placeholder='Ingrese cantidad'></input>
                   </div>
                 </div>
                 <div class='modal-footer'>
