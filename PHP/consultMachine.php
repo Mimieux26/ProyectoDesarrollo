@@ -12,6 +12,8 @@ echo " <tr>
             <th>Descripcion</th>
             <th>Precio</th>
             <th>Estado</th>
+            <th>Url de imagen</th>
+            <th>Acciones</th>
       </tr>";
 
 while($maquinas=mysqli_fetch_array($consulta)){
@@ -22,9 +24,10 @@ while($maquinas=mysqli_fetch_array($consulta)){
     echo "<td>".$maquinas["Descripcion"]."</td>";
     echo "<td>".$maquinas["Precio"]."</td>";
     echo "<td>".$maquinas["Estado"]."</td>";
+    echo "<td>".$maquinas["UrlMaqui"]."</td>";
     echo "<td>
             <button type='button' class='btn btn-warning' onclick='show_machine(".$maquinas["IDArti"].");'>Editar</button>
-            <button type='button' class='btn btn-danger' onclick='delete_machine(".$maquinas["IDArti"].");'>Eliminar</button>
+            <button type='button' class='btn btn-danger'  onclick='delete_machine(".$maquinas["IDArti"].");'>Eliminar</button>
           </td>";     
     echo "</tr>";
 

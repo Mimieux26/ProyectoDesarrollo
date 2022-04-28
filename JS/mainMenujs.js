@@ -24,6 +24,32 @@ $(document).ready(function(){
 
     });
 
+    $("#btnCloseSession").click(function(){
+        $.ajax({
+            url: "../PHP/closeSession.php",
+            method: "POST",
+            success: function(dataResponse,responseText,response,statusText){
+                if(dataResponse==1){
+                    setTimeout(8000);
+                    alert("Se cerrará la sesión");
+                    
+                }
+                
+                
+                
+            }
+    
+        });
+
+        
+
+
+
+
+
+
+    });
+
 
 
 

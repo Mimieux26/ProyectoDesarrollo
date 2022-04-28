@@ -11,10 +11,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/9d0fb474ff.js" crossorigin="anonymous"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 
     <!--Style CSS -->
     <link rel="stylesheet" href="../CSS/MiExperencia.css">
@@ -46,31 +43,26 @@
     </nav>
   </header>
 
-  <section>
-
+  <div class="container">
     <form action="" method="post">
-      <h2 class = "title_principal"> Califícanos </h2>
-      
-      <div class = "container" id="containerCali">
-        
-      
-      </div>
+      <h2 class = "title_principal">Experiencias</h2>
     </form>
-
-            <!-- <textarea name="COMENTARIO" id="COMENTARIO" cols="30" rows="10"></textarea>
-            <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
-            <button type='button' class='btn btn-primary'  id='".$maquinas["IDArti"]."'> Enviar </button> -->
-              
-
-        
-    </div>
-    
-    
-
-
-  </section>
-
-
+      <div class="card">
+        <div class="card-header">Cometarios de Usuarios</div>
+        <div class="card-body" id="insertUser">
+            <form class="form-horizontal" method="post" action="#" id="formRegister">
+                <div class="form-group">
+                    <label for="TipIden" class="cols-sm-2 control-label">Nombre Usuario</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+  </div>
 
 
 </body>

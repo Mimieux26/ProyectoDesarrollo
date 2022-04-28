@@ -89,11 +89,34 @@ $(document).ready(function(){
 
         }
 
+        var urlMaqui=$("#urlMaqui").val();
+        if(urlMaqui==""){
+            if($("#urlMaqui").hasClass('green-alert')==true){
+                $("#urlMaqui").removeClass('green-alert');
+
+
+            }
+            $("#urlMaqui").addClass("red-alert");
+            $("#span-imgMaqui").text("Debe ingresar una url");
+            return false;
+
+        }
+        else{
+            if($("#urlMaqui").hasClass('red-alert')==true){
+                $("#urlMaqui").removeClass('red-alert');
+
+            }
+            $("#urlMaqui").addClass("green-alert");
+            $("#span-imgMaqui").text("Listo");
+
+        }
+
         var machineJSON={
             "nombreMaqui": nombreMaqui,
             "descMaqui": descMaqui,
             "precioMaqui" : precioMaqui,
-            "estadoMaqui": estadoMaqui
+            "estadoMaqui": estadoMaqui,
+            "urlMaqui": urlMaqui
 
         };
 
@@ -106,6 +129,7 @@ $(document).ready(function(){
 
                 if(dataResponse==1){
                 alert("Se ha registrado con exito");
+                setTimeout(1000);
                 
             }
             else{
@@ -217,12 +241,35 @@ $(document).ready(function(){
 
         }
 
+        var urlMaqui=$("#urlMaqui").val();
+        if(urlMaqui==""){
+            if($("#urlMaqui").hasClass('green-alert')==true){
+                $("#urlMaqui").removeClass('green-alert');
+
+
+            }
+            $("#urlMaqui").addClass("red-alert");
+            $("#span-imgMaqui").text("Debe ingresar una url");
+            return false;
+
+        }
+        else{
+            if($("#urlMaqui").hasClass('red-alert')==true){
+                $("#urlMaqui").removeClass('red-alert');
+
+            }
+            $("#urlMaqui").addClass("green-alert");
+            $("#span-imgMaqui").text("Listo");
+
+        }
+
         var updateMachineJSON={
             "idArt": idArt,
             "nombreMaqui": nombreMaqui,
             "descMaqui": descMaqui,
             "precioMaqui" : precioMaqui,
-            "estadoMaqui": estadoMaqui
+            "estadoMaqui": estadoMaqui,
+            "urlMaqui": urlMaqui
 
         };
 
@@ -317,6 +364,7 @@ function show_machine(valor){
         success: function(dataResponse,responseText,response,statusText){
             
             var data_machine=dataResponse;
+           
 
             
             $("#idMaqui").val(data_machine["IDArti"]);
@@ -324,6 +372,8 @@ function show_machine(valor){
             $("#descMaqui").val(data_machine["Descripcion"]);
             $("#precioMaqui").val(data_machine["Precio"]);
             $("#estadoMaqui").val(data_machine["Estado"]);
+            $("#urlMaqui").val(data_machine["UrlMaqui"]);
+            
         }
 
     });
@@ -374,7 +424,7 @@ function ShowDialog(ingreso) {
 
 
                 $(this).dialog("close");
-                location.reload();
+                location.replace("../HTML/adminMachine.html");
             },
                 'Cancelar': function () {
                 $(this).dialog("close");

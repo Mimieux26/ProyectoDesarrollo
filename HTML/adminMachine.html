@@ -8,7 +8,7 @@
 
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -60,6 +60,18 @@
 
         resize: none;
       }
+
+      table{
+        table-layout: fixed;
+        width: 250px;
+    }
+    
+    th, td {
+        border: 1px solid blue;
+        width: 50px;
+        height: 100px;
+        word-wrap: break-word;
+    }
 
 
   </style>
@@ -130,13 +142,23 @@
                                           <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                                           <select id="estadoMaqui" class="form-control">
                                             <option value="0">Seleccione</option>
-                                            <option value="Disponible">Disponible</option>
-                                            <option value="No disponible">No disponible</option>
+                                            <option value="1">Disponible</option>
+                                            <option value="2">No disponible</option>
                                           </select>
                                           <span class="mensaje arrowLeft" id="span-estadoM">Seleccione el estado de la maquina</span>
                                       </div>
                                   </div>
                               </div>
+                              <div class="form-group">
+                                <label  class="cols-sm-2 control-label">URL de imagen</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control"  id="urlMaqui"/>
+                                        <span class="mensaje arrowLeft" id="span-imgMaqui">Ingrese la url de la imagen (No puede ser mayor a 500 caracteres, puede que la imagen no se muestre correctamente)</span>
+                                    </div>
+                                </div>
+                            </div>
                               <div class="form-group ">
                                   <button type="submit" class="btn btn-primary btn-lg btn-block login-button" id="btnRegistrar">Registrar</button>
                                   <button type="button" class="btn btn-warning btn-lg btn-block login-button"id="btnActualizar">Actualizar</button>
