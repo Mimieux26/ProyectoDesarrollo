@@ -20,20 +20,20 @@ $(document).ready(function(){
 
 function insert_car(valor){
 
-    var cantArti=$("#CantidadMaquina").val();
+    var cantArti=$("#CantidadMaquina"+valor).val();
     if(cantArti==""||cantArti==0){
         alert("No puede estar vacia la cantidad");
         return false;
     }
 
-    var CanDias=$("#CanDias").val();
+    var CanDias=$("#CanDias"+valor).val();
     if(CanDias==""||CanDias==0){
         alert("No puede estar vacia la cantidad de Días");
         return false;
     }
 
     var IDArti=valor;
-    var precioMaqui=$("#precioMaqui").val();
+    var precioMaqui=$("#precioMaqui"+valor).val();
 
     $.ajax({
         url: "../PHP/insertCarrito.php",
@@ -42,7 +42,7 @@ function insert_car(valor){
         success: function(dataResponse,responseText){
             if(dataResponse==1){
                 alert("Se ha registrado con exito");
-                location.reload();
+                 location.reload();
             }
             
         }
