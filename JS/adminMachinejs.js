@@ -1,3 +1,4 @@
+///se inicia la validacion de si es usuario o no para realizar distintas acciones///
 $(document).ready(function(){
     $("#btnActualizar").hide();
     $("#btnRegistrar").click(function(){
@@ -110,7 +111,7 @@ $(document).ready(function(){
             $("#span-imgMaqui").text("Listo");
 
         }
-
+ //se cre el json para enviar a php
         var machineJSON={
             "nombreMaqui": nombreMaqui,
             "descMaqui": descMaqui,
@@ -119,7 +120,7 @@ $(document).ready(function(){
             "urlMaqui": urlMaqui
 
         };
-
+// se insertan los datos
         $.ajax({
             url: "../PHP/insertMachine.php",
             method: "POST",
@@ -150,7 +151,7 @@ $(document).ready(function(){
 
 
     });
-
+// funcionalidades del boton actualizar
     $("#btnActualizar").click(function(){
         var idArt=$("#idMaqui").val();
         var nombreMaqui=$("#nombreMaqui").val();
@@ -262,7 +263,7 @@ $(document).ready(function(){
             $("#span-imgMaqui").text("Listo");
 
         }
-
+// se crea el json para enviar datos a php
         var updateMachineJSON={
             "idArt": idArt,
             "nombreMaqui": nombreMaqui,
@@ -272,7 +273,7 @@ $(document).ready(function(){
             "urlMaqui": urlMaqui
 
         };
-
+// se inicia el proceso de envio
         $.ajax({
             url: "../PHP/updateMachine.php",
             method: "POST",
@@ -303,7 +304,7 @@ $(document).ready(function(){
 
 
     });
-
+// se consulta las maquinas existentes
     $.ajax({
         url: "../PHP/consultMachine.php",
         method: "POST",
@@ -317,7 +318,7 @@ $(document).ready(function(){
 
 
 
-
+/// se crea una ventana emergente
 
     $("input[type=text]").focus(function(){
         // activamos la viñeta
@@ -352,7 +353,7 @@ $(document).ready(function(){
 
 
 });
-
+// muestra la maquina
 function show_machine(valor){
     $("#btnActualizar").show();
     $("#btnRegistrar").hide();
