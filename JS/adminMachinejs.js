@@ -152,7 +152,7 @@ $(document).ready(function(){
     });
 
     $("#btnActualizar").click(function(){
-        var idArt=$("#idArt").val();
+        var idArt=$("#idMaqui").val();
         var nombreMaqui=$("#nombreMaqui").val();
         if(nombreMaqui==""){
             if($("#nombreMaqui").hasClass('green-alert')==true){
@@ -277,11 +277,12 @@ $(document).ready(function(){
             url: "../PHP/updateMachine.php",
             method: "POST",
             data:{objJSON: JSON.stringify(updateMachineJSON)},
-            dataType:'JSON',
+            //dataType:'JSON',
             success: function(dataResponse,responseText,response,statusText){
 
                 if(dataResponse==1){
                 alert("Se ha registrado con exito");
+                location.replace("../HTML/adminMachine.html")
                 
             }
             else{

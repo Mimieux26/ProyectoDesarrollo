@@ -12,7 +12,7 @@ $idArt=$json_obj->{"idArt"};
 $urlMaqui=$json_obj->{"urlMaqui"};
 
 $sql="UPDATE maquinaria SET Nombre='$nombreMaqui',Descripcion='$descMaqui',Precio='$precioMaqui',Estado='$estadoMaqui', UrlMaqui='$urlMaqui'
-WHERE IDArt=".$idArt;
+WHERE IDArti=".$idArt;
 
 echo mysqli_query($conexion,$sql);        
 
